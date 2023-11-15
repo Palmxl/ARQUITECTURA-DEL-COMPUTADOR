@@ -9,7 +9,7 @@ SANTIAGO CAMARGO
 
 LINK VIDEO:
 
-
+```
 CODIGO ALGORITMO BOOTH:
 ; Variables
 vauxi:0b00000000
@@ -70,3 +70,4 @@ booth_add:
         booth_loop ; Volver al bucle principal
 FIN:
     HLT  ;Fin del programa
+```
