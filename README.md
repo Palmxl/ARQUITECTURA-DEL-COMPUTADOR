@@ -54,22 +54,22 @@ booth_loop:
     booth_add ; Si Q AND 0b11 tiene carry, sumar
     
 booth_no_add:
-        ; Continuar con otras operaciones si no se suma
-        JMP CTE 
-        booth_loop ; Volver al bucle principal
+    ; Continuar con otras operaciones si no se suma
+    JMP CTE 
+    booth_loop ; Volver al bucle principal
 
 booth_add:
-        ; Sumar el multiplicando (M) al producto
-        MOV ACC, M ; Cargar M en ACC
-        ADD ACC, A ; Sumar M a A
-        MOV A, ACC ; Copiar ACC a A
-        ; Actualizar el producto
-        MOV ACC, product ; Cargar el producto en ACC
-        ADD ACC, A ; Sumar el resultado anterior al producto
-        MOV product, ACC ; Actualizar el producto
-        ; Continuar con otras operaciones
-        JMP CTE 
-        booth_loop ; Volver al bucle principal
+    ; Sumar el multiplicando (M) al producto
+    MOV ACC, M ; Cargar M en ACC
+    ADD ACC, A ; Sumar M a A
+    MOV A, ACC ; Copiar ACC a A
+    ; Actualizar el producto
+    MOV ACC, product ; Cargar el producto en ACC
+    ADD ACC, A ; Sumar el resultado anterior al producto
+    MOV product, ACC ; Actualizar el producto
+    ; Continuar con otras operaciones
+    JMP CTE 
+    booth_loop ; Volver al bucle principal
 FIN:
     HLT  ;Fin del programa
 ```
